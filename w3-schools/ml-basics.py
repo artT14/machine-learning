@@ -3,6 +3,9 @@ import numpy
 import math
 from scipy import stats
 import matplotlib.pyplot as plt
+from sklearn.metrics import r2_score
+import pandas
+from sklearn import linear_model
 
 """
 DATA SETS:
@@ -155,21 +158,44 @@ SCATTER PLOT
 LINEAR REGERSSION:
 useful for predicting future values
 """
-x = [5,7,8,7,2,17,2,9,4,11,12,9,6]
-y = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+# x = [5,7,8,7,2,17,2,9,4,11,12,9,6]
+# y = [99,86,87,88,111,86,103,87,94,78,77,85,86]
 
-slope, intercept, r, p, std_err = stats.linregress(x, y)
+# slope, intercept, r, p, std_err = stats.linregress(x, y)
 
-def myfunc(x):
-  return slope * x + intercept
+# def myfunc(x):
+#   return slope * x + intercept
 
-mymodel = list(map(myfunc, x))
+# mymodel = list(map(myfunc, x))
 
-plt.scatter(x, y)
-plt.plot(x, mymodel)
-plt.show()
+# plt.scatter(x, y)
+# plt.plot(x, mymodel)
+# plt.show()
 
-print(r) #r indicates how accurate the prediction is
+# print(r) #r indicates how accurate the prediction is
 
-speed = myfunc(10) #predicting the speed of a 10 y/o car
-print(speed)
+# speed = myfunc(10) #predicting the speed of a 10 y/o car
+# print(speed)
+
+"""
+POLYNOMIAL REGRESSION:
+like linear regression but useful when a line is not a good fit
+"""
+
+# x = [1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,21,22]
+# y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]
+
+# mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+
+# myline = numpy.linspace(1, 22, 100) #start at 1, end at 22
+
+# plt.scatter(x, y)
+# plt.plot(myline, mymodel(myline))
+# plt.show()
+
+# #generate r^2 score
+# print(r2_score(y, mymodel(x)))
+
+# #predict speed of car passing at 17 pm
+# speed = mymodel(17)
+# print(speed)
