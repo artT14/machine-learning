@@ -38,3 +38,14 @@ graph.write_png('mydecisiontree.png')
 img=pltimg.imread('mydecisiontree.png')
 imgplot = plt.imshow(img)
 plt.show()
+
+# Gini = 1 - (x/n)^2 - (y/n)^2
+
+# PREDICT values
+# Should I go see a show starring a 40 years old American comedian,
+#  with 10 years of experience, and a comedy ranking of 7?
+print(dtree.predict([[40, 10, 7, 1]])) # YES
+print(dtree.predict([[40, 10, 6, 1]])) # NO
+
+# NOTE: decision tree will give different answers if ran enough times
+
