@@ -1,0 +1,8 @@
+ML ALGORITHMS:
+
+Linear Regression -- design a function that allows us to make numerical predictions
+
+Decision Trees -- Make a YES/NO decision based on given data
+
+Support Vector Machine -- Make Classification based on parameters
+
