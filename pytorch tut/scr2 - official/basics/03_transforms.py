@@ -1,3 +1,4 @@
+# LINK: https://pytorch.org/tutorials/beginner/basics/transforms_tutorial.html
 import torch
 from torchvision import datasets
 from torch.utils.data import DataLoader

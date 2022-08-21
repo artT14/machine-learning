@@ -1,3 +1,4 @@
+# LINK: https://pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html
 import torch
 import numpy as np
 

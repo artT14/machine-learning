@@ -1,3 +1,4 @@
+# LINK: https://pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html
 import os
 import torch
 from torch import nn

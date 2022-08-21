@@ -1,6 +1,6 @@
+# LINK: https://pytorch.org/tutorials/beginner/basics/data_tutorial.html
 # DATASET stores our samples
 # DATALOADER wraps an iterable around the DATASET, enabling easy access to samples
-
 import torch
 from torch.utils.data import Dataset
 from torchvision import datasets
